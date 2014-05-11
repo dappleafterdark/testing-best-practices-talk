@@ -1,0 +1,4 @@
+spec/failing_fast/count_surprises_spec.rb:12: failing fast on unexpected stateshould let us know if there are too many records: expected: "http://www.example.com"      got: nil  (compared using ==)
+spec/failing_fast/create_bang_spec.rb:9: failing fast with create!should let us know if the setup fails: Couldn't find Meme without an ID
+spec/informative_failures/dont_be_success_spec.rb:7: response codesshould tell us something use full if a request spec fails: expected success? to return true, got false
+spec/informative_failures/lists_spec.rb:9: A list of hash keysshould be able to figure out the missing ones: expected collection contained:  ["2klj", "an2d", "asdf", "asof", "dflo", "laksjd

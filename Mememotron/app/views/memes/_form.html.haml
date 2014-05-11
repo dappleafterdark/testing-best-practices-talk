@@ -1,0 +1,16 @@
+= form_for @meme do |f|
+  - if @meme.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@meme.errors.count, "error")} prohibited this meme from being saved:"
+      %ul
+        - @meme.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :url
+    = f.text_field :url
+  .actions
+    = f.submit 'Save'

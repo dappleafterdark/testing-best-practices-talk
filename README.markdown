@@ -51,3 +51,7 @@
     - Sue hacking Alice
 
 - No factories.
+
+```bash
+alias rspec="rspec  --require=support/formatters/vim_formatter.rb --format VimFormatter --out quickfix.out --format NyanCatFormatter --order=1"
+```
