@@ -1,29 +1,31 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.0.0'
-gem 'rails', '3.2.11'
+ruby "2.0.0"
+gem "rails", "3.2.11"
 
-gem 'haml-rails'
-gem 'sqlite3'
-gem 'jquery-rails'
+gem "haml-rails"
+gem "sqlite3"
+gem "jquery-rails"
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem "sass-rails",   "~> 3.2.3"
+  gem "coffee-rails", "~> 3.2.1"
+  gem "uglifier", ">= 1.0.3"
 end
 group :development do
-  gem 'guard-bundler'
-  gem 'guard-rails'
-  gem 'guard-rspec', '~>4.0.3'
+  gem "guard-bundler"
+  gem "guard-rails"
+  gem "guard-rspec", "~>4.0.3"
+  gem "spring-commands-rspec"
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem "rspec-rails"
 end
 
 group :test do
-  gem 'database_cleaner', '1.0.1'
+  gem "database_cleaner", "1.0.1"
   gem "nyan-cat-formatter"
+  gem "fetching"
 end
 
