@@ -25,7 +25,7 @@
 
 - UUIDs in Testing
   - https://git.innova-partners.com/cmm/requests-api/blob/master/spec/requests/request_spec.rb#L86
-  - enforcing difference: add one to it.
+  - enforcing difference: add one to it. *
 
 - re-read the specs during the refactor.  If you can't grok it, it's too complicated.
 - Expectations first, lets last
