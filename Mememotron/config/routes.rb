@@ -1,6 +1,6 @@
 Mememotron::Application.routes.draw do
   resources :memes
-
+  resources :crypto_currencies
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

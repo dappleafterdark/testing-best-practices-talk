@@ -1,5 +1,5 @@
 class MemesController < ApplicationController
-  before_filter :authenticate!, only: [:index]
+  before_filter :id_required!, only: [:index]
 
   def index
     @memes = Meme.all
@@ -10,12 +10,12 @@ class MemesController < ApplicationController
     end
   end
 
-  def authenticate!
+  def id_required!
     unless params[:api_id]
       render json: { error: "you need an api_id" }, status: 401
     end
   end
-  private :authenticate!
+  private :id_required!
 
   def show
     @meme = Meme.find(params[:id])
