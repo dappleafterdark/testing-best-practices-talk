@@ -18,8 +18,8 @@
 - No factories.
 
 - Testing for future refactors
-  - Features that give you free stuff later shoud still force you to write a test later.
-    - https://git.innova-partners.com/cmm/forms-api/blob/master/app/controllers/forms_controller.rb#L44
+  - Features that give you free stuff later shoud still force you to write a test later. *
+    - https://git.innova-partners.com/cmm/forms-api/blob/master/app/controllers/forms_controller.rb#L44 *
   - If you must, use Liskov Substitution: *
     - https://git.innova-partners.com/cmm/requests-api/blob/master/spec/requests/authentication_spec.rb#L38 *
 

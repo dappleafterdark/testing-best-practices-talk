@@ -1,4 +1,20 @@
 class CryptoCurrenciesController < ApplicationController
+  before_filter :hide_identity
+
+  def hide_identity
+    if params[:name] == "Satoshi Nakamoto"
+      render json: { error: "Don't use my real name." }, status: 422
+  end
+  private :hide_identity
+
+  # def create_bitcoin
+  #   # A new developer adds this action.
+  #   # do I require `#hide_identity`?
+  #   #
+  #   # When I'm refactored to BitcoinsController#create
+  #   # will the developer remember to `#hide_identity`?
+  # end
+
   def index
     @crypto_currencies = CryptoCurrency.all
 
