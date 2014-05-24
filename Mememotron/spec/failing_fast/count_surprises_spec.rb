@@ -15,3 +15,4 @@ describe "failing fast on unexpected state" do
 
   let(:url) { "http://www.example.com" }
 end
+
