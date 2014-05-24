@@ -13,6 +13,8 @@ class SlideAdvancer
   def initialize(writer, slides)
     @writer = writer
     @slides = slides
+    @queue_out, @queue_in  = IO.pipe
+    Thread.new { work_the_queue }
   end
 
   def start
@@ -22,15 +24,22 @@ class SlideAdvancer
 
   private
 
+  def work_the_queue
+    loop {
+      @queue_out.readpartial(READSIZE)
+      Array(current_command_set).each do |c|
+        sleep DELAY
+        @writer.write c
+      end
+    }
+  end
+
   def init_signal_handler
     Signal.trap("USR1") { advance }
   end
 
   def advance
-    Array(current_command_set).each do |c|
-      sleep DELAY
-      @writer.puts c
-    end
+    @queue_in << "Advance"
   end
 
   def current_command_set
@@ -42,9 +51,12 @@ end
 class Presentation
 
   def initialize(slide_file)
-    slides = YAML.load_file(slide_file)
+    @slides = YAML.load_file(slide_file)
+  end
+
+  def start
     spawn_application do |writer|
-      SlideAdvancer.new(writer, slides).start
+      SlideAdvancer.new(writer, @slides).start
     end
   end
 
@@ -53,6 +65,7 @@ class Presentation
   def spawn_application
     PTY.spawn("bash") do |r, w, pid|
       r.winsize = STDOUT.winsize
+      w.puts "clear"
       draw_screen_from(r)
       yield w
     end
@@ -66,5 +79,9 @@ class Presentation
 
 end
 
-puts "Send `kill -s USR1 #{Process.pid}` to advance the slide."
-Presentation.new(ARGV[0])
+command = "kill -s USR1 #{Process.pid}"
+puts "Send `#{command}` to advance the slide.";
+IO.popen("pbcopy", "w"){|pbcopy| pbcopy << command }
+STDIN.getc
+
+Presentation.new(ARGV[0]).start
