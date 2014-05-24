@@ -4,6 +4,7 @@ class CryptoCurrenciesController < ApplicationController
   def hide_identity
     if params[:name] == "Satoshi Nakamoto"
       render json: { error: "Don't use my real name." }, status: 422
+    end
   end
   private :hide_identity
 
