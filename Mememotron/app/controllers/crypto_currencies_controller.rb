@@ -14,6 +14,7 @@ class CryptoCurrenciesController < ApplicationController
   #   #
   #   # When I'm refactored to BitcoinsController#create
   #   # will the developer remember to `#hide_identity`?
+  #   render json: { fail: "Free lunch!?" }
   # end
 
   def index
