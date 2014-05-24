@@ -47,3 +47,16 @@
   - One file for the happy path
   - One file for each sad path
     - Sue hacking Alice
+
+---
+## Running:
+
+```
+cd Mememotron
+../tty_command.rb ../slides.yaml
+```
+
+In a separate terminal window, use the `kill` command that's been put into your clipboard to advance the presentation
+```
+kill -s USR1 60776  # just an example
+```
