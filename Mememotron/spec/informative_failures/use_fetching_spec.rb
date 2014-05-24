@@ -5,7 +5,7 @@ describe "Use the Fetching gem" do
   json = <<-HEREDOC.strip_heredoc
     {
       "drug": {
-        "similar_drugs": [
+        "similars": [
           {
             "href": "https://covermymeds.com/...",
             "name": "nasonex"
@@ -21,10 +21,10 @@ describe "Use the Fetching gem" do
   HEREDOC
 
   it "should be easy to see mistakes" do
-    api_response = JSON(json)
-    first_similar = api_response["drugs"]["simi1ar_drugs"].first
+    api_data = JSON(json)
+    similar = api_data["drugs"]["simi1ars"].first
 
-    expect(first_similar["name"]).to eq("nasonex")
+    expect(similar["name"]).to eq("nasonex")
   end
 
 end
