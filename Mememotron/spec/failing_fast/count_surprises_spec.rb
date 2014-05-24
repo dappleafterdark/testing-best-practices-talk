@@ -1,7 +1,5 @@
 require "spec_helper"
 
-Meme.create name: "Nyan Cat"
-
 describe "failing fast on unexpected state" do
 
   before do
@@ -14,5 +12,7 @@ describe "failing fast on unexpected state" do
   end
 
   let(:url) { "http://www.example.com" }
-end
 
+  Meme.create name: "Nyan Cat"
+
+end
