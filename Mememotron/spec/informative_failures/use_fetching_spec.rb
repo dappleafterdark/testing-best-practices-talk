@@ -22,7 +22,7 @@ describe "Use the Fetching gem" do
 
   it "should be easy to see mistakes" do
     api_data = JSON(json)
-    similar = api_data["drugs"]["simi1ars"].first
+    similar = api_data["drugs"]["similars"].first
 
     expect(similar["name"]).to eq("nasonex")
   end
