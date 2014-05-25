@@ -12,7 +12,8 @@ class MemesController < ApplicationController
 
   def id_required!
     unless params[:api_id]
-      render json: { error: "you need an api_id" }, status: 401
+      message = "you need an api_id"
+      render json: { error: message}, status: 401
     end
   end
   private :id_required!
