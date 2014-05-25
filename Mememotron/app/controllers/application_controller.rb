@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :authenticate!, only: [:create]
+  # before_filter :authenticate!, only: [:create]
 
   protected
 
