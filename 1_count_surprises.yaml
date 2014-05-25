@@ -44,7 +44,6 @@
   - ":redraw!" # enter
   - "\x0d" # enter
 - " j" # run the specs
-- "\x0d" # enter
 
 # - "\x1b" # esc
 #- "\x0d" # enter
