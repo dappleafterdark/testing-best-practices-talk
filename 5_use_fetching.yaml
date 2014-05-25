@@ -1,0 +1,60 @@
+-
+  - vim
+  - "\x0d" # enter
+  - ":map <leader>j :! spring rspec % --require=support/formatters/no_summary_formatter.rb -f NoSummaryFormatter<cr>"
+  - "\x0d" # enter
+  - ":tabe spec/informative_failures/use_fetching_spec.rb"
+  - "\x0d" # enter
+-
+  - ":5"
+  - "\x0d" # enter
+  - "zt"
+-
+  - ":23"
+  - "\x0d" # enter
+  - "zt"
+- " j" # run the specs
+- "\x0d" # enter
+-
+  - ":25"
+  - "\x0d" # enter
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - ":24"
+  - "\x0d" # enter
+  - "/JSON"
+  - "\x0d" # enter
+  - "ciw"
+  - "Fetching.from_json"
+  - "\x1b" # esc
+-
+  - "j"
+  - ":s/\\[\"/./g"
+  - "\x0d" # enter
+  - ":s/\"]//g"
+  - "\x0d" # enter
+-
+  - "2j"
+  - ":s/\\[\"/./g"
+  - "\x0d" # enter
+  - ":s/\"]//g"
+  - "\x0d" # enter
+  - " w"
+- " j" # run the specs
+- "\x0d" # enter
+-
+  - ":25"
+  - "\x0d" # enter
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - "/drugs"
+  - "\x0d" # enter
+  - "ciw"
+  - "drug"
+  - "\x1b" # esc
+  - " w"
+- " j" # run the specs
