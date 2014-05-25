@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "leveraging SecureRandom", type: :request do
+describe "leveraging randomness", type: :request do
   let(:unique_name) { "my-silly-meme-name" }
 
   before do
