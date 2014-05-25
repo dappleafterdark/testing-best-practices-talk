@@ -5,6 +5,7 @@ describe "Use the Fetching gem" do
   json = <<-HEREDOC.strip_heredoc
     {
       "drug": {
+        "name": "flownase",
         "similars": [
           {
             "href": "https://covermymeds.com/...",
@@ -14,8 +15,7 @@ describe "Use the Fetching gem" do
             "href": "https://covermymeds.com/...",
             "name": "mucinex"
           }
-        ],
-        "name": "flownase"
+        ]
       }
     }
   HEREDOC
