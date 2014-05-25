@@ -1,0 +1,58 @@
+-
+  - vim
+  - "\x0d" # enter
+  - ":map <leader>j :! spring rspec % --require=support/formatters/no_summary_formatter.rb -f NoSummaryFormatter<cr>"
+  - "\x0d" # enter
+  - ":tabe spec/pro_tips/use_secure_random_spec.rb"
+  - "\x0d" # enter
+- " j" # run the specs
+- "\x0d" # enter
+
+-
+  - "G"
+  - "o"
+  - "# Pretty good:"
+-
+  - "\x0d" # enter
+  - " - We know *only one* was created."
+-
+  - "\x0d" # enter
+  - "- We know it has *our field set.*"
+-
+  - "\x0d" # enter
+  - "\x0d" # enter
+  - "Can we do better?"
+-
+  - " (yea, we can)" # enter
+  - "\x1b" # esc
+-
+  - ":4"
+  - "\x0d" # enter
+  - "zz"
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - "/silly"
+  - "\x0d" # enter
+  - "ca\""
+  - "SecureRandom.uuid "
+  - "\x1b" # esc
+  - " w"
+- " j" # run the specs
+- "\x0d" # enter
+-
+  - "G"
+  - "zz"
+  - "C"
+-
+  - "# - Now it's tolerant of strange records."
+-
+  - "\x0d" # enter
+  - "- Now we're free from having to name things."
+-
+  - "\x0d" # enter
+  - "- It's now clear that this isn't a magic string."
+-
+  - "\x0d" # enter
+  - "- It's now impossible to copy-paste this string."
