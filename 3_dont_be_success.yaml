@@ -1,0 +1,51 @@
+-
+  - vim
+  - "\x0d" # enter
+  - ":map <leader>j :! spring rspec % --require=support/formatters/no_summary_formatter.rb -f NoSummaryFormatter<cr>"
+  - "\x0d" # enter
+  - ":tabe spec/informative_failures/dont_be_success_spec.rb"
+  - "\x0d" # enter
+- " j" # run the specs
+- "\x0d" # enter
+-
+  - ":7"
+  - "\x0d" # enter
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - "%i.status.to_i"
+  - "\x1b" # esc
+  - "$ciw"
+  - "eq(200)"
+  - "\x1b" # esc
+  - " w"
+- " j" # run the specs
+- "\x0d" # enter
+- ":tabe app/controllers/memes_controller.rb"
+- "\x0d" # enter
+-
+  - ":2"
+  - "\x0d" # enter
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - ":13"
+  - "\x0d" # enter
+  - "V"
+  - "6j"
+  - "\x1b" # esc
+  - "\x1b" # esc
+- "gT"
+-
+  - ":6"
+  - "\x0d" # enter
+  - "V"
+  - "\x1b" # esc
+  - "\x1b" # esc
+-
+  - "A, api_id: \"captain_obvious\""
+  - "\x1b" # esc
+  - " w"
+- " j" # run the specs
