@@ -712,3 +712,16 @@ img {
   border: 1px solid #444;
   max-width: 100%;
 }
+
+#cover, #my, #meds {
+  display: inline-block;
+  word-spacing: 0px;
+  font-size: 118px;
+  margin-top: 250px;
+}
+#cover, #meds {
+  color: orange;
+}
+#my {
+  color: magenta;
+}
