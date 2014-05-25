@@ -1,4 +1,4 @@
-Introduction:
+## Introduction:
  - Assumes a TDD work flow (yea, we still do that)
  1. Protecting your specs from stupid (me)
  2. Getting usefull failure messages (NoMethod on nil anyone?)
@@ -17,9 +17,7 @@ spec/
     └── use_secure_random_spec.rb
 ```
 
----
 ## Running:
-
 ```
 cd Mememotron
 ../tty_command.rb ../a-slides-file.yaml
