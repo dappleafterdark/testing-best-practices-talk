@@ -725,3 +725,12 @@ img {
 #my {
   color: magenta;
 }
+
+.cover-my-meds {
+  background: radial-gradient(ellipse at center 0%, #0088b2 0%, #085385 100%);
+}
+
+.cover-my-meds div {
+  background-color: transparent !important;
+  text-shadow: 4px 3px 4px #444;
+}
