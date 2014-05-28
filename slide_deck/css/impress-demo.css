@@ -716,18 +716,20 @@ img {
 #cover, #my, #meds {
   display: inline-block;
   word-spacing: 0px;
-  font-size: 118px;
+  font-size: 136px;
   margin-top: 250px;
+  font-family: Gill Sans;
 }
 #cover, #meds {
-  color: orange;
+  color: #F79421;
 }
 #my {
-  color: magenta;
+  color: #CE0058;
 }
 
 .cover-my-meds {
   background: radial-gradient(ellipse at center 0%, #0088b2 0%, #085385 100%);
+  white-space: nowrap;
 }
 
 .cover-my-meds div {
