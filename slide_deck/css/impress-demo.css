@@ -768,3 +768,12 @@ img {
   padding-top: 100px;
   background-color: #abe;
 }
+
+#mike-overlay{
+  position: absolute;
+  height: 605px;
+  width: 783px;
+  top: 40px;
+  left: 57px;
+  border: none;
+}
