@@ -79,8 +79,8 @@ class Presentation
 
 end
 
-command = "kill -s USR1 #{Process.pid}"
-puts "Send `#{command}` to advance the slide.";
+command = "ruby killer.rb #{Process.pid}"
+puts "Run `#{command}` and press any key to advance the slide.";
 IO.popen("pbcopy", "w"){|pbcopy| pbcopy << command }
 STDIN.getc
 
