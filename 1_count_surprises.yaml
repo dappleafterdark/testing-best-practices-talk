@@ -41,6 +41,7 @@
 -
   - ":silent ! rake db:test:prepare"
   - "\x0d" # enter
+-
   - ":redraw!" # enter
   - "\x0d" # enter
 - " j" # run the specs
