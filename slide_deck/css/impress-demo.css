@@ -704,8 +704,8 @@ a:focus {
 #impress {
   text-align: center;
 }
-* {
-  background-color: black !important;
+.slide {
+  background-color: black ;
 }
 img {
   max-height: 100%;
@@ -716,12 +716,64 @@ img {
 #cover, #my, #meds {
   display: inline-block;
   word-spacing: 0px;
-  font-size: 118px;
+  font-size: 136px;
   margin-top: 250px;
+  font-family: Gill Sans;
 }
 #cover, #meds {
-  color: orange;
+  color: #F79421;
 }
 #my {
-  color: magenta;
+  color: #CE0058;
+}
+
+.cover-my-meds {
+  background: radial-gradient(ellipse at center 0%, #0088b2 0%, #085385 100%);
+  white-space: nowrap;
+}
+
+.cover-my-meds div {
+  background-color: transparent !important;
+  text-shadow: 4px 3px 4px #444;
+}
+
+.lets-do-this {
+  font-family: 'Enriqueta', serif;
+  background-color: #CE0058;
+  color: #ddd;
+  padding-top: 300px;
+}
+.lets-do-this .large {
+  font-weight: bold;
+  font-size: 200px;
+}
+.lets-do-this .small {
+  font-size: 32px;
+}
+.jon {
+  background: transparent;
+  padding-top: 128px;
+}
+.screen-shot1{
+  padding-top: 110px;
+  background-color: #abe;
+}
+.screen-shot2 img {
+  box-shadow: 5px 5px 17px #555;
+}
+.screen-shot1 img {
+  box-shadow: 5px 5px 17px #555;
+}
+.screen-shot2{
+  padding-top: 100px;
+  background-color: #abe;
+}
+
+#mike-overlay{
+  position: absolute;
+  height: 605px;
+  width: 783px;
+  top: 40px;
+  left: 57px;
+  border: none;
 }
