@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby
 at_exit { `reset` }
 
+require 'pty'
 require 'io/console'
 require 'yaml'
 
